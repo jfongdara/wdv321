@@ -1,0 +1,201 @@
+.myContainer {
+  background-color: #FEFAE0;
+  margin: 0px;
+  padding: 0px;
+}
+
+#myNavBar {
+  background-color: #606C38;
+  -webkit-box-shadow: 0px 2px 9px black;
+          box-shadow: 0px 2px 9px black;
+  z-index: 1;
+}
+
+#myNavBar a {
+  color: #FEFAE0;
+}
+
+#myNavBar .myBrand {
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-left: 50px;
+}
+
+.carousel-item {
+  height: 45vh;
+  background-color: #777;
+  position: relative;
+}
+
+.carousel-item .carousel-caption {
+  margin-bottom: 10vh;
+  color: #FEFAE0;
+  text-shadow: 5px 5px 5px black;
+  font-size: 20px;
+  font-family: optima ,sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.carousel-item .carousel-caption h1 {
+  font-size: 50px;
+}
+
+hr {
+  border-top: 3px dotted white;
+  margin-top: 35px;
+}
+
+.receipeCards {
+  padding: 50px;
+}
+
+.receipeCards .card-body {
+  background-color: #606C38;
+  color: #FEFAE0;
+  border: 5px solid black;
+}
+
+.receipeCards .card-body h5 {
+  padding-top: 10px;
+}
+
+.receipeCards .card-body p {
+  margin: 0px;
+}
+
+.receipeCards h1 {
+  font-family: optima ,sans-serif, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.receipeCards .card {
+  margin-top: 50px;
+}
+
+.receipeCards .card img {
+  border: 5px solid black;
+  border-bottom: 0px solid;
+}
+
+.receipeCards .spinachImg {
+  height: 700px;
+}
+
+.receipeCards .recipeButton {
+  background-color: #DDA15E;
+  color: #FEFAE0;
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.receipeCards .accordion {
+  color: #606C38;
+}
+
+.receipeCards .accordion .accordion-button {
+  background-color: #FEFAE0;
+  color: #606C38;
+}
+
+.receipeCards .accordion .accordion-body {
+  background-color: #FEFAE0;
+}
+
+.ownRecipeButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ownRecipeButton .testRecipe {
+  background-color: #606C38;
+  color: #FEFAE0;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+  border: 5px solid black;
+}
+
+.ownRecipeButton .testRecipe button {
+  background-color: #DDA15E;
+  color: #FEFAE0;
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  margin-top: 5px;
+}
+
+#formRecipe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#formRecipe #form {
+  background-color: #606C38;
+  padding: 35px;
+  color: #FEFAE0;
+}
+
+#formRecipe #form h1 {
+  padding-bottom: 20px;
+}
+
+#formRecipe #form button {
+  background-color: #DDA15E;
+  color: #FEFAE0;
+  border: none;
+}
+
+#formRecipe #form input[type=button] {
+  background-color: #DDA15E;
+  color: #FEFAE0;
+  border: none;
+}
+
+#formRecipe #form input[type=reset] {
+  background-color: #DDA15E;
+  color: #FEFAE0;
+  border: none;
+}
+
+.card-deck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer {
+  font-size: 15px;
+  background-color: #606C38;
+  color: #FEFAE0;
+  padding: 25px;
+}
+
+.footer a {
+  color: #FEFAE0;
+}
+
+.footer a:hover {
+  color: #ffe44e;
+}
+/*# sourceMappingURL=style.css.map */

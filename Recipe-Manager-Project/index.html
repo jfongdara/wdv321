@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/function.js"></script>
+    <script src="./js/index.js"></script>
+    <title>Recipe Manager</title>
+</head>
+<body onload="displayPastaOri(); displayCrockpotOri(); displaySpinachOri(); hideOptions()"> <!-- Hides functions hideOptions() onload page -->
+    <div class="container-fluid myContainer">
+
+        <div class="navbar navbar-expand-md navbar-light" id="myNavBar">
+            <a class="myBrand navbar-brand" href="index.html">JSTN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Togge navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                    <ul class="navbar-nav ms-auto me-5">
+                        <li><a href="./index.html" class="nav-link me-5">Home</a></li>
+                        <li><a href="./recipe.html" class="nav-link me-5">Your Recipe</a></li>
+                        <li><a href="#" class="nav-link me-5">About Us</a></li>
+                        <li><a href="#" class="nav-link me-5">Contact</a></li>
+                    </ul>
+                </div>
+        </div><!-- End Nav -->
+        
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/carbonara-horizontal-articleLarge-v2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Welcome To Justin's Recipe's</h1>
+                  <p>All Dishes That Justin Likes</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/Garlic-Prime-Rib-Gravy-LEAD-2-803d4696ccc2409da8f3101a1071e532.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Welcome To Justin's Recipe's</h1>
+                  <p>All Dishes That Justin Likes</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slow-cooker-chili-horizontal-1529354330.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Welcome To Justin's Recipe's</h1>
+                  <p>All Dishes That Justin Likes</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div><!-- End Carousel -->
+
+          <hr>
+
+          <div class="receipeCards">
+            <h1>Recipes</h1>
+              <div class="row">
+                  <div class="col-md-4" id="crockpot">
+                      <div class="card text-center">
+                        <img src="./img/slow-cooker-chili-horizontal-1529354330.png" alt="chilli">
+                        <div class="card-body">
+                            <h2>Cockput Chilli</h2>
+                            <p>Serves: 6</p>
+                            <p>Preparation: 25 minutes</p>
+                            <p>Cooking: 6 hours</p>
+                            <p>Difficulty: Medium</p>
+                            <button class="recipeButton" onclick="showCrockpot()">Show Recipe</button>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4" id="pasta">
+                    <div class="card text-center">
+                      <img src="./img/alex-motoc-QEbIgaxP7N8-unsplash.jpg" alt="chilli">
+                      <div class="card-body">
+                          <h2>Pasta Alfredo</h2>
+                          <p>Serves: 2</p>
+                          <p>Preparation: 15 minutes</p>
+                          <p>Cooking: 10 hours</p>
+                          <p>Difficulty: Medium</p>
+                          <button class="recipeButton" onclick="showPasta()">Show Recipe</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="spinach">
+                    <div class="card text-center">
+                      <img src="./img/Easy-Crockpot-Spinach-and-Artichoke-Dip.jpeg" alt="chilli">
+                      <div class="card-body">
+                          <h2>Spinach Artichoke Dip</h2>
+                          <p>Serves: 6</p>
+                          <p>Preparation: 10 minutes</p>
+                          <p>Cooking: 2 hours</p>
+                          <p>Difficulty: Easy</p>
+                          <button class="recipeButton" onclick="showSpinach()">Show Recipe</button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card-deck col-lg-6 mx-auto" id="crockpotHide"><!-- Crockpot -->
+                <div class="card">
+                  <img class="card-img-top" src="./img/slow-cooker-chili-horizontal-1529354330.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h3 class="card-title text-center">Crockpot Chilli</h3>
+                      <div>
+                        <h5>Serving Sizes: <span id="servingSize"></span></h5>
+                        <input type="radio" id="original" name="servingSize" value="original" onchange="displayCrockpotOri()">
+                        <label for="original">Original</label><br>
+                        <input type="radio" id="half" name="servingSize" value="half" onchange="displayCrockpotHalf()">
+                        <label for="half">Half</label><br>
+                        <input type="radio" id="double" name="servingSize" value="double" onchange="displayCrockpotDouble()">
+                        <label for="double">Double</label><br>
+                      </div>
+                      <h5>Recipe Information:</h5>
+                      <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Ingredients
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p><span id="ingred1"></span></p>
+                              <p><span id="ingred2"></span></p>
+                              <p><span id="ingred3"></span></p>
+                              <p><span id="ingred4"></span></p>
+                              <p><span id="ingred5"></span></p>
+                              <p><span id="ingred6"></span></p>
+                              <p><span id="ingred7"></span></p>
+                              <p><span id="ingred8"></span></p>
+                              <p><span id="ingred9"></span></p>
+                              <p><span id="ingred10"></span></p>
+                              <p><span id="ingred11"></span></p>
+                              <p><span id="ingred12"></span></p>  
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Instructions
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p>1. Heat cooking oil in 2 quart skillet.</p>
+                              <p>2. Saute onions and peppers for 5 minutes.</p>
+                              <p>3. Add spices and stir for 30 seconds.</p>
+                              <p>4. Add meat and cook until browned. Approximately 15 minutes.</p>
+                              <p>5. Pour contents of skillet into 3 quart crock pot.</p>
+                              <p>6. Rinse beans and place in crockpot.</p>
+                              <p>7. Open and pour Tomato puree and sauce into crock pot.</p>
+                              <p>8. Cover crockpot and cook on low for 6 hours.</p>
+                              <p>9. Serve into individual bowls and top with sour cream and cheese.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div><!-- Crockpot card end -->
+              <div class="card-deck col-lg-6 mx-auto" id="pastaHide"><!-- Pasta -->
+                <div class="card">
+                  <img class="card-img-top" src="./img/alex-motoc-QEbIgaxP7N8-unsplash.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h3 class="card-title text-center">Pasta Alfredo</h3>
+                      <div>
+                        <h5>Serving Sizes: <span id="pastaServingSize"></span></h5>
+                        <input type="radio" id="original" name="servingSize" value="original" onchange="displayPastaOri()">
+                        <label for="original">Original</label><br>
+                        <input type="radio" id="half" name="servingSize" value="half" onchange="displayPastaHalf()">
+                        <label for="half">Half</label><br>
+                        <input type="radio" id="double" name="servingSize" value="double" onchange="displayPastaDouble()">
+                        <label for="double">Double</label><br>
+                      </div>
+                      <h5>Recipe Information:</h5>
+                      <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Ingredients
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p><span id="pastaIngred1"></span></p>
+                              <p><span id="pastaIngred2"></span></p>
+                              <p><span id="pastaIngred3"></span></p>
+                              <p><span id="pastaIngred4"></span></p>
+                              <p><span id="pastaIngred5"></span></p>
+                              <p><span id="pastaIngred6"></span></p>
+                              <p><span id="pastaIngred7"></span></p>
+                              <p><span id="pastaIngred8"></span></p>
+                              <p><span id="pastaIngred9"></span></p>
+                              <p><span id="pastaIngred10"></span></p>
+                              <p><span id="pastaIngred11"></span></p>
+                              <p><span id="pastaIngred12"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Instructions
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p>1. Cook the pasta according to the package instructions.</p>
+                              <p>2. Melt the butter in a large skillet over medium high heat. Add the garlic and cook for 30 seconds, or until fragrant.</p>
+                              <p>3. Pour in the milk and cream. Stir consistently to avoid burning on the bottom of the pan until the mixture comes to a boil. Turn the heat down to medium, and mix in the parmesan cheese, salt, and pepper. Adjust the seasoning to your own taste.</p>
+                              <p>4. Remove the pan from the heat and mix in the cooked pasta until the sauce begins to thicken. Garnish with parsley, and serve.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div><!-- Pasta card end -->
+              <div class="card-deck col-lg-6 mx-auto" id="spinachHide"><!-- Spinach -->
+                <div class="card">
+                  <img class="card-img-top spinachImg" src="./img/Easy-Crockpot-Spinach-and-Artichoke-Dip.jpeg" width="300px" alt="Spinach Artichoke Dip">
+                  <div class="card-body">
+                    <h3 class="card-title text-center">Spinach Artichoke Dip
+                    </h3>
+                      <div>
+                        <h5>Serving Sizes: <span id="spinachServingSize"></span></h5>
+                        <input type="radio" id="original" name="servingSize" value="original" onchange="displaySpinachOri()">
+                        <label for="original">Original</label><br>
+                        <input type="radio" id="half" name="servingSize" value="half" onchange="displaySpinachHalf()">
+                        <label for="half">Half</label><br>
+                        <input type="radio" id="double" name="servingSize" value="double" onchange="displaySpinachDouble()">
+                        <label for="double">Double</label><br>
+                      </div>
+                      <h5>Recipe Information:</h5>
+                      <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Ingredients
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p><span id="spinachIngred1"></span></p>
+                              <p><span id="spinachIngred2"></span></p>
+                              <p><span id="spinachIngred3"></span></p>
+                              <p><span id="spinachIngred4"></span></p>
+                              <p><span id="spinachIngred5"></span></p>
+                              <p><span id="spinachIngred6"></span></p>
+                              <p><span id="spinachIngred7"></span></p>
+                              <p><span id="spinachIngred8"></span></p>
+                              <p><span id="spinachIngred9"></span></p>
+                              <p><span id="spinachIngred10"></span></p>
+                              <p><span id="spinachIngred11"></span></p>
+                              <p><span id="spinachIngred12"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Instructions
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p>1. Combine all ingredients.  Add all of the ingredients to the bowl of a small slow-cooker and toss briefly to combine.</p>
+                              <p>2. Slow cook.  Cover and cook* on low for 2-3 hours or on high for 1 hour, until the cheese is completely melted.</p>
+                              <p>3. Stir and season.  Stir the dip until evenly combined.  Taste and season with salt and pepper as needed.</p>
+                              <p>4. Serve.  Serve warm, accompanied with whatever dippers you prefer.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div><!-- Spinach card end -->                
+   
+
+          </div>
+
+          <div class="ownRecipeButton">
+            <div class="testRecipe">
+              <h1>Create your own Recipe</h1>
+              <a href="./recipe.html"><button>Make Your Own Recipes</button> </a>
+            </div>
+          </div>
+          <hr>
+          <!-- Footer  -->
+          <div class="footer d-flex justify-content-around">
+              <div class="footerNav">
+                <h2>Navigation</h2>
+                    <ul class="navbar-nav ms-auto me-5">
+                        <li><a href="./index.html" class="nav-link me-5">Home</a></li>
+                        <li><a href="./recipe.html" class="nav-link me-5">Recipe</a></li>
+                        <li><a href="#" class="nav-link me-5">About Us</a></li>
+                        <li><a href="#" class="nav-link me-5">Contact</a></li>
+                    </ul>
+              </div>
+              <div class="footerNav">
+                  <h2>Help</h2>
+                  <ul class="navbar-nav ms-auto me-5">
+                      <li><a href="#" class="nav-link me-5">Customer Service</a></li>
+                      <li><a href="#" class="nav-link me-5">FAQ</a></li>
+                      <p>© Copyright 2021. Justin’s Recipes</p>
+                  </ul>
+              </div>
+          </div>
+
+    </div>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
